@@ -29,7 +29,7 @@ func Test1(t *testing.T) {
 				return
 			case v := <-ch.Out():
 				t1 := time.Now().UTC()
-				log.Printf("v=%d, elapsed=%dus", v, t1.Sub(t0).Microseconds())
+				log.Printf("v=%d, elapsed=%dµs", v, t1.Sub(t0).Microseconds())
 			}
 		}
 	}()
@@ -82,7 +82,7 @@ func Test2(t *testing.T) {
 			case v := <-ch.Out():
 				if v == bench {
 					t1 := time.Now().UTC()
-					log.Printf("v=%d, elapsed=%dus", v, t1.Sub(t0).Microseconds())
+					log.Printf("v=%d, elapsed=%dµs", v, t1.Sub(t0).Microseconds())
 				}
 			}
 		}
